@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "dev.pages.urbanpay_mobile_lite.twa",
+        "sha256_cert_fingerprints": ["37:56:AD:AF:42:91:3F:0F:FC:88:64:D4:03:88:C9:41:74:5D:1E:FA:7D:7F:60:C6:AA:B2:53:D5:5E:28:37:CB"]
+      }
+    }]

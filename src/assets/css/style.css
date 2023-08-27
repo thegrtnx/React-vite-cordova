@@ -1,0 +1,368 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth !important;
+  transition: 0.5s ease-in !important;
+}
+
+
+/********** Font Faces **********/
+
+@font-face {
+  font-family: poppinsmed;
+  src: url(../fonts/Poppins/Poppins-Medium.ttf);
+  font-weight: bold;
+}
+
+
+@font-face {
+  font-family: poppinsreg;
+  src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: poppinsthin;
+  src: url(../fonts/Poppins/Poppins-Thin.ttf);
+}
+
+
+@font-face {
+  font-family: poppinslight;
+  src: url(../fonts/Poppins/Poppins-Light.ttf);
+}
+
+
+@font-face {
+  font-family: poppinsbold;
+  src: url(../fonts/Poppins/Poppins-Bold.ttf);
+  font-weight: bold;
+}
+
+
+@font-face {
+  font-family: poppinssemibold;
+  src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
+  font-weight: bold;
+}
+
+
+
+body {
+  
+  overscroll-behavior-y: contain;
+  /*background-image: url('../img/bg.png');*/
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  --tw-bg-opacity: 1;
+  background-color: rgb(7 7 7 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.offcanva {
+
+    border-radius: 2.5rem 2.5rem 0rem 0rem !important;
+
+}
+
+
+
+.otp .otpbox {
+  gap: 0.55rem !important;
+  text-align: center !important;
+  justify-content: center !important;
+  margin: auto !important;
+}
+
+
+.otp input {
+  width: 3rem !important;
+  height: 3rem !important;
+  border-radius: 0.9rem !important;
+  border: 0.1rem solid #B2B2B2;
+  color: #000 !important;
+  background-color: transparent !important;
+  user-select: none !important;
+}
+
+
+.otp input:focus {
+  outline: none !important;
+  border:1px solid #632FD9 !important;
+  box-shadow: 0 0 10px #632FD9 !important;
+  user-select: none !important;
+}
+
+
+
+.Idle  {
+  font-family: poppinsbold, sans-serif !important;
+  font-size: 20px !important;
+}
+
+
+
+/********** Toastify **********/
+
+.Toastify__toast {
+
+  min-height: 1rem !important;
+  padding: 3px !important;
+  height: 5rem !important;
+}
+
+
+.Toastify__toast-body > div:last-child {
+
+  text-align: center !important;
+
+}
+
+
+.Toastify__close-button > svg {
+
+  display: none !important;
+
+}
+
+
+.Toastify__toast-theme--dark {
+
+  border: none !important;
+  border-radius: 1.5rem !important;
+  background-color: #FBCF00 !important;
+  color: #000 !important;
+  margin: 1.2rem !important;
+}
+
+.Toastify__toast-theme--info {
+
+  border: none !important;
+  border-radius: 1.5rem !important;
+  background-color: #FBCF00 !important;
+  color: #000 !important;
+  margin: 1.2rem !important;
+}
+
+.Toastify__toast-theme--danger {
+
+  border: none !important;
+  border-radius: 1.5rem !important;
+  background-color: red !important;
+  color: #fff !important;
+  margin: 1.2rem !important;
+}
+
+
+
+/********** Onboarding screen **********/
+.onboard-button {
+
+  font-family: poppinsmed, sans-serif !important;
+}
+
+.onboard-text {
+
+  font-family: poppinssemibold, sans-serif !important;
+}
+
+.onboard-image {
+
+  width: 17rem !important;
+  justify-content: center !important;
+  text-align: center !important;
+
+}
+
+
+
+/********** Onboardng screen carousel **********/
+
+
+.carousel .control-dots {
+  margin: 12rem 0 !important;
+}
+
+.carousel .control-dots .dot.selected, .carousel .control-dots .dot:hover {
+  opacity: 1;
+  border-radius: 100px !important;
+  width: 35px !important;
+  height: 8px !important;
+  filter: alpha(opacity=100);
+}
+
+.carousel .control-dots .dot {
+  box-shadow: none !important;
+  background: #fff !important;
+}
+
+
+
+/********** SignUp *********/
+
+/* Change autocomplete styles in WebKit */
+.signup input:-webkit-autofill,
+.signup input:-webkit-autofill:hover, 
+.signup input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff !important;
+  -webkit-box-shadow: 0 0 0px 40rem #070707 inset !important;
+}
+
+.signup input::placeholder {
+  
+  padding: 0.5rem !important;
+
+}
+
+
+.signup input:focus {
+
+  padding-left: 1.5rem !important;
+
+}
+
+
+.signup input::placeholder {
+
+  color: rgb(115 115 115) !important;
+}
+
+
+.PhoneInput {
+  padding: 0.75rem !important;
+  border-radius: 0.25rem !important;
+  border: 2px solid rgb(82 82 82) !important;
+  background: transparent !important; 
+  color: #fff !important;
+}
+
+
+.PhoneInput:focus{
+  outline: none !important;
+  border:10px solid #632FD9 !important;
+  box-shadow: 0 0 10px #632FD9 !important;
+}
+
+
+.signup .PhoneInputInput {
+  background-color: transparent !important;
+}
+
+
+
+.signup .PhoneInputInput:focus{
+  outline: none !important;
+  border:none !important;
+  box-shadow: none !important;
+  padding-left: 0.5rem !important;
+}
+
+
+
+/********** Light Mode **********/
+@media (prefers-color-scheme: light) {
+
+  body {
+
+    --tw-bg-opacity: 1 !important;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+    --tw-text-opacity: 1 !important;
+    color: rgb(7 7 7 / var(--tw-text-opacity)) !important;
+  }
+
+  .carousel .control-dots .dot {
+    box-shadow: none !important;
+    background: #632FD9 !important;
+  }
+
+  .signup input::placeholder {
+
+    color: rgb(163 163 163) !important;
+  }
+
+  .PhoneInput {
+    border: 2px solid rgb(229 229 229) !important;
+    color: #000 !important;
+  }
+
+  /* Change autocomplete styles in WebKit */
+  .signup input:-webkit-autofill,
+  .signup input:-webkit-autofill:hover, 
+  .signup input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #000 !important;
+    -webkit-box-shadow: 0 0 0px 40rem #fff inset !important;
+  } 
+
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth !important;
+  }
+}
+
+
+@media print {
+  :root {
+    display: none !important;
+    pointer-events: none !important;
+  }
+}
+
+
+
+/********** RESPONSIVENESS **********/
+
+/* Extra small devices (phones, 375px and down) */
+@media only screen and (max-width: 380px) {
+
+  .carousel .control-dots {
+    margin: 10.5rem 0 !important;
+  }
+
+  .onboard-image {
+
+    width: 15.5rem !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+}
